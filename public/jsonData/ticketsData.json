@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Login issue",
+        "description": "User unable to login with correct credentials.",
+        "customer": "Frank",
+        "priority": "Medium",
+        "status": "Resolved",
+        "createdAt": "2025-09-07 16:08:13"
+    },
+    {
+        "id": 2,
+        "title": "Payment failed",
+        "description": "Customer's payment not processed successfully.",
+        "customer": "Bob",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2025-09-03 16:08:13"
+    },
+    {
+        "id": 3,
+        "title": "Slow loading page",
+        "description": "Website takes too long to load.",
+        "customer": "David",
+        "priority": "Low",
+        "status": "Resolved",
+        "createdAt": "2025-09-02 16:08:13"
+    },
+    {
+        "id": 4,
+        "title": "Bug in report",
+        "description": "Reports page showing incorrect data.",
+        "customer": "Helen",
+        "priority": "Critical",
+        "status": "Open",
+        "createdAt": "2025-09-21 16:08:13"
+    },
+    {
+        "id": 5,
+        "title": "Feature request",
+        "description": "Customer requested a new feature implementation.",
+        "customer": "Bob",
+        "priority": "Low",
+        "status": "Closed",
+        "createdAt": "2025-09-07 16:08:13"
+    },
+    {
+        "id": 6,
+        "title": "Email not sending",
+        "description": "Emails are not being sent to recipients.",
+        "customer": "Ian",
+        "priority": "Critical",
+        "status": "Resolved",
+        "createdAt": "2025-09-30 16:08:13"
+    },
+    {
+        "id": 7,
+        "title": "UI glitch on dashboard",
+        "description": "Dashboard UI elements overlap on smaller screens.",
+        "customer": "David",
+        "priority": "Critical",
+        "status": "Open",
+        "createdAt": "2025-09-07 16:08:13"
+    },
+    {
+        "id": 8,
+        "title": "Database error",
+        "description": "Database connection error observed.",
+        "customer": "Ian",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2025-09-14 16:08:13"
+    },
+    {
+        "id": 9,
+        "title": "Mobile app crash",
+        "description": "Mobile app crashes after update.",
+        "customer": "Helen",
+        "priority": "Medium",
+        "status": "Resolved",
+        "createdAt": "2025-09-22 16:08:13"
+    },
+    {
+        "id": 10,
+        "title": "Security concern",
+        "description": "Potential vulnerability reported.",
+        "customer": "Ian",
+        "priority": "Low",
+        "status": "Closed",
+        "createdAt": "2025-09-26 16:08:13"
+    },
+    {
+        "id": 11,
+        "title": "Notification delay",
+        "description": "Push notifications delayed by hours.",
+        "customer": "Jack",
+        "priority": "High",
+        "status": "Closed",
+        "createdAt": "2025-09-09 16:08:13"
+    },
+    {
+        "id": 12,
+        "title": "Invoice not generated",
+        "description": "Invoice generation fails for some users.",
+        "customer": "Helen",
+        "priority": "High",
+        "status": "In Progress",
+        "createdAt": "2025-09-26 16:08:13"
+    }
+]
