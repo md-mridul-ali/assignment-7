@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const Navbar = () => {
   return (
-    <div className=" bg-purple-100 shadow-md border-b-[0.5px] border-gray-300">
+    <div className=" bg-purple-100 shadow-md border-b-[0.5px] border-gray-300 mb-[100px]">
       <Container>
       <nav className="px-8 py-4 flex justify-between items-center">
         <h1 className="md:text-xl text-sm font-bold">CS — Ticket System</h1>
