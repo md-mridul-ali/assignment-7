@@ -88,23 +88,6 @@
         "priority": "MEDIUM PRIORITY",
         "status": "Open",
         "createdAt": "1/24/2024"
-    },
-    {
-        "id": 11,
-        "title": "Notification delay",
-        "description": "Push notifications delayed by hours.",
-        "customer": "Jack",
-        "priority": "High",
-        "status": "Closed",
-        "createdAt": "2025-09-09 16:08:13"
-    },
-    {
-        "id": 12,
-        "title": "Invoice not generated",
-        "description": "Invoice generation fails for some users.",
-        "customer": "Helen",
-        "priority": "High",
-        "status": "In Progress",
-        "createdAt": "2025-09-26 16:08:13"
     }
+ 
 ]
