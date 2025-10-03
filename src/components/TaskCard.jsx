@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskCard = ({order}) => {
+const TaskCard = ({order, handleCooking}) => {
     // console.log(order)
     return (
         <div>
@@ -10,7 +10,7 @@ const TaskCard = ({order}) => {
                                     order.title
                                 }
                             </p>
-                            <button className='bg-[#02A53B] w-full px-4 py-2 rounded-xs'>Complete</button>
+                            <button onClick={() => handleCooking(order)} className='bg-[#02A53B] w-full px-4 py-2 rounded-xs'>Complete</button>
                         </div>
         </div>
     );

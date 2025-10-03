@@ -3,6 +3,7 @@ import React, { use, useState } from 'react';
 import Card from './Card';
 import States from './States';
 import TaskCard from './TaskCard';
+import ReadyCard from './ReadyCard';
 
 const Dynamic = ({ ordersPromise }) => {
 
@@ -10,26 +11,39 @@ const Dynamic = ({ ordersPromise }) => {
     // console.log(orders);
 
     const [cookingItems, setCookingItems] = useState([]);
+    const [readyItems, setReadyItems] = useState([]);
+    
 
 
     const handleOrder=(order)=>{
-        console.log(order);
+        // console.log(order);
         //agge check koro task status a ache kina
         const isExist=cookingItems.find((item)=> item.id == order.id);
 
         if(isExist){
             alert("Already Added!!");
             return;
+
         }
         //task status er vitore click kora ticket dhukabo
         const newCookingItems = [...cookingItems, order];
         setCookingItems(newCookingItems);
     };
-    console.log(cookingItems);
+    // console.log(cookingItems);
+
+const handleCooking = (order) =>{
+    // console.log(order);
+    //1.resolver er vitore ticket ke dhukaw
+    const newReadyItems = [...readyItems, order];
+    setReadyItems(newReadyItems);
+    //2.task status theke ticket ke remove korbe
+    const remaining = cookingItems.filter((item) => item.id !== order.id);
+    setCookingItems(remaining);
+}
 
     return (
         <div>
-            <States cookingTotal={cookingItems.length} order={orders.length}></States>
+            <States cookingTotal={cookingItems.length} order={orders.length} readyTotal={readyItems.length}></States>
             <div className='w-11/12 mx-auto md:grid grid-cols-12 gap-5 mb-[40px]'>
 
                 <div className='col-span-9  h-[] '>
@@ -50,7 +64,7 @@ const Dynamic = ({ ordersPromise }) => {
                         {/* <h6>Select a ticket to add to Task Status</h6> */}
                         {
                             cookingItems.map((order) =>(
-                                <TaskCard key={order.id} order={order}></TaskCard>
+                                <TaskCard handleCooking={handleCooking} key={order.id} order={order}></TaskCard>
                             ))
                         }
                     </div>
@@ -58,9 +72,11 @@ const Dynamic = ({ ordersPromise }) => {
                     <div>
                         <h2 className='mb-[16px] mt-[30px]'>Resolved Task</h2>
                         {/* <h6>Select a ticket to add to Task Status</h6> */}
-                        <div className='bg-[#E0E7FF] p-4 shadow-2xl rounded-xs mb-[20px]'>
-                            <p className=''>Payment Failed - Card Declined</p>
-                        </div>
+                        {
+                            readyItems.map((order) =>(
+                                <ReadyCard key={order.id} order={order}></ReadyCard>
+                            ))
+                        }
                     </div>
 
                 </div>
