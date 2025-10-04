@@ -1,16 +1,61 @@
-# React + Vite
+## Question 1: What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JSX**  
+JSX (JavaScript XML) is a special syntax used in React that lets you write **HTML-like code inside JavaScript**.
 
-Currently, two official plugins are available:
+**Why it is used**
+- Makes code easier to read and write  
+- React uses JSX to render components faster and cleaner  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Question 2: What is the difference between State and Props?
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**State**
+- Managed inside a component  
+- Mutable (can change) using `setState` or `useState` in hooks  
+- Used to store dynamic data that can change over time  
 
-## Expanding the ESLint configuration
+**Props**
+- Short for Properties  
+- Passed from parent to child component  
+- Read-only  
+- Used to send data into a component  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Question 3: What is the useState hook, and how does it work?
+
+**useState**  
+- `useState` is a React Hook that adds state to a function component.  
+- It makes components **dynamic & interactive**.  
+
+**How it works**
+- `useState` returns two things:  
+  1. A **state variable** (holds the current value)  
+  2. A **function** to update that value  
+- Whenever we update the state using that function, React re-renders the component with the new value.  
+
+---
+
+## Question 4: How can you share state between components in React?
+
+**Ways to Share State Between Components**
+1. **Lift State Up** – Move state to the nearest common parent and pass it as props  
+2. **Using Context API** – Share state globally without prop drilling  
+
+---
+
+## Question 5: How is event handling done in React?
+
+React handles events almost like HTML/JS but has some key differences:  
+
+1. Use **CamelCase** instead of lowercase  
+   - HTML: `onclick="..."`  
+   - React: `onClick={...}`  
+
+2. Pass a **function** instead of a string  
+   - HTML: `<button onclick="doSomething()">Click</button>`  
+   - React: `<button onClick={doSomething}>Click</button>`  
+
+---
