@@ -10,6 +10,11 @@ const ReadyCard = ({ order }) => {
                     order.title
                 }
             </p>
+            <p>Completed At: 
+                {
+                    order.cookedAt
+                }
+            </p>
 
         </div>
 

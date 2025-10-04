@@ -4,11 +4,13 @@ import Card from './Card';
 import States from './States';
 import TaskCard from './TaskCard';
 import ReadyCard from './ReadyCard';
+import { toast } from 'react-toastify';
 
 const Dynamic = ({ ordersPromise }) => {
 
-    const orders = use(ordersPromise);
+    const data = use(ordersPromise);
     // console.log(orders);
+    const [orders, setOrders] = useState(data);
 
     const [cookingItems, setCookingItems] = useState([]);
     const [readyItems, setReadyItems] = useState([]);
@@ -16,6 +18,7 @@ const Dynamic = ({ ordersPromise }) => {
 
 
     const handleOrder=(order)=>{
+        toast.info("In-Progress")
         // console.log(order);
         //agge check koro task status a ache kina
         const isExist=cookingItems.find((item)=> item.id == order.id);
@@ -32,13 +35,19 @@ const Dynamic = ({ ordersPromise }) => {
     // console.log(cookingItems);
 
 const handleCooking = (order) =>{
+    toast.success("Complete")
     // console.log(order);
     //1.resolver er vitore ticket ke dhukaw
+    order.cookedAt = new Date().toLocaleTimeString();
     const newReadyItems = [...readyItems, order];
     setReadyItems(newReadyItems);
     //2.task status theke ticket ke remove korbe
     const remaining = cookingItems.filter((item) => item.id !== order.id);
     setCookingItems(remaining);
+
+    //3.tickets theke ticket take remove korte hobe
+    const remainingOrders = orders.filter((item) => item.id !== order.id);
+    setOrders(remainingOrders);
 }
 
     return (
