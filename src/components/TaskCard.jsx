@@ -10,7 +10,7 @@ const TaskCard = ({ order, handleCooking }) => {
                     order.title
                 }
             </p>
-            <button onClick={() => handleCooking(order)} className='bg-[#02A53B] w-full px-4 py-2 rounded-xs'>Complete</button>
+            <button onClick={() => handleCooking(order)} className='bg-[#02A53B] w-full px-4 py-2 rounded-xs hover:cursor-pointer'>Complete</button>
         </div>
 
     );
